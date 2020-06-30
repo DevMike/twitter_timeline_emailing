@@ -1,0 +1,17 @@
+<p>Hello, here are the tweets<p>
+<table>
+  <tr>
+    <th>URL</th>
+    <th>Author</th>
+    <th>Description</th>
+    <th>Creation Date</th>
+  <tr>
+  {% for tw in @tweets %}
+    <tr>
+      <td>{{ tw["url"] }}</td>
+      <td>{{ tw["from"] }}</td>
+      <td>{{ tw["description"] }}</td>
+      <td>{{ tw["created_at"] }}</td>
+    </tr>
+  {% endfor %}
+</table>
